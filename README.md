@@ -1,2 +1,1 @@
-# scripts
-My scripts.
+# Scripts and Commands
