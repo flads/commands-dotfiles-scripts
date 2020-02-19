@@ -10,3 +10,6 @@ php artisan make:controller UserController
 php artisan make:migration create_projects_table
 
 php artisan make:command SendEmails --command=Command
+
+php artisan db:seed
+# --> php artisan db:seed --class=PermissionsTableSeeder
