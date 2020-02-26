@@ -11,5 +11,8 @@ history | grep command_name
 sudo -u postgres psql
 
 # Running a postgres script from the terminal:
-psql -h 127.0.0.1 -U postgres -d qualocep -f Downloads/qualocep.sql
+psql -h 127.0.0.1 -U postgres -d database -f filename.sql
+
+# Finding a file by name in a specific directory:
+find . -name "filename"
 
