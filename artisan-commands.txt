@@ -11,3 +11,7 @@ php artisan make:command SendEmails --command=Command
 
 php artisan db:seed
 php artisan db:seed --class=PermissionsTableSeeder
+
+php artisan migrate
+php artisan migrate --path=/database/migrations/my_migration.php
+
