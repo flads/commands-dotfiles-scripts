@@ -37,10 +37,13 @@ git push origin master
 #### Git Flow command:
 git flow release finish 'v1.0'
 
-#### Undo the last commit and send the changes back to the staging area:
-git reset HEAD~1 --soft
-
 #### Working with hotfix:
 git flow hotfix start hotfix_branch
 git flow hotfix finish hotfix_branch
+
+#### Undo the last commit and send the changes back to the staging area:
+git reset HEAD~1 --soft
+
+#### Stash the changes in a dirty working directory away:
+git stash
 
