@@ -18,6 +18,9 @@ Esc
 - Go to next result: n
 - Back to previous result: N
 
+# Go to the end of the function:
+:%
+
 # Go to the first line:
 gg
 
@@ -38,4 +41,16 @@ Ctrl-r
 
 # Change each 'foo' to 'bar', but ask for confirmation first.
 :%s/foo/bar/gc
+
+# Delete the contents of your role body:
+:d%
+
+# Split the Vim window horizontally:
+:sp
+
+# Split the Vim window vertically:
+:vsp
+
+# Moves between Vim viewports:
+Ctrl-w (right)/(left)
 
