@@ -49,16 +49,17 @@ nvm use v12.14.0
 sudo curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
 sudo echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
 
-sudo apt update && sudo apt install yarn -y
+sudo apt-get update
+sudo apt-get install yarn -y
 
-# -------- #
-# OH MY ZSH:
-# -------- #
+# ------------- #
+# ZSH and others:
+# ------------- #
 
 sudo apt-get update
 sudo apt-get install zsh -y
 
-sudo apt-get install powerline fonts-powerline
+sudo apt-get install powerline fonts-powerline -y
 
 git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
