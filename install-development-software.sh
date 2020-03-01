@@ -70,3 +70,26 @@ cd ~/.oh-my-zsh && upgrade_oh_my_zsh
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "$HOME/.zsh-syntax-highlighting" --depth 1
 echo "source ~/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ~/.zshrc
 
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
+# Set ZSH_THEME="powerlevel10k/powerlevel10k" in ~/.zshrc.
+
+sudo apt-get install screen -y
+
+# ----- #
+# HTTPIE:
+# ----- #
+
+sudo apt-get install httpie -y
+
+# ----- #
+# GOGH:
+# ----- #
+
+# gsettings get org.gnome.Terminal.ProfilesList list (list profiles)
+# dconf reset -f /org/gnome/terminal/legacy/profiles:/ (reset profiles)
+
+dconf write /org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/use-theme-colors false
+
+bash -c  "$(wget -qO- https://git.io/vQgMr)"
+# Select '(168) Terminix Dark'
+
