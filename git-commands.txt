@@ -41,6 +41,9 @@ git flow release finish 'v1.0'
 git flow hotfix start hotfix_branch
 git flow hotfix finish hotfix_branch
 
+# Interactively choose patch pieces and create commits:
+git commit -p
+
 # Undo the last commit and send the changes back to the staging area:
 git reset HEAD~1 --soft
 
