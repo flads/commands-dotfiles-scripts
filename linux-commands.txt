@@ -7,6 +7,9 @@ java -jar bfg.jar  --replace-text replacements.txt -fi *.php  my-repo.git
 # Search for a particular command in the history:
 history | grep command_name
 
+# Display an exact number of lines:
+history | head -n 10
+
 # Search if a certain software is installed:
 dpkg -l | grep "software_name"
 
@@ -19,22 +22,3 @@ psql -h 127.0.0.1 -U postgres -d database -f filename.sql
 # Finding a file by name in a specific directory:
 find . -name "filename"
 find . -name "*filename*"
-
-# Screen commands:
-Ctrl-a + c: It creates a new window.
-Ctrl-a + w: It displays the list of all the windows currently opened.
-Ctrl-a + A: It renames the current windows. The name will appear when you will list the list of windows opened with Ctrl-a + w.
-Ctrl-a + n: It goes to the next windows.
-Ctrl-a + p: It goes to the previous windows.
-Ctrl-a + Ctrl-a: It backs to the last windows used.
-Ctrl-a + k: It closes the current windows (kill).
-Ctrl-a + S: It splits the current windows horizontally. To switch between the windows, do Ctrl-a + Tab.
-Ctrl-a + |: It splits the current windows vertically.
-Ctrl-a + d: It detaches a screen session without stopping it.
-Ctrl-a + r: It reattaches a detached screen session.
-Ctrl-a + [: It starts the copy mode.
-Ctrl-a + ]: It pastes the copied text.
-
-# Download an entire website:
-wget -m http://example.com
-
