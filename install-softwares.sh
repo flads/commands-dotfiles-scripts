@@ -65,7 +65,7 @@ sudo apt-get install httpie -y
 dconf write /org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/use-theme-colors false
 
 bash -c  "$(wget -qO- https://git.io/vQgMr)"
-# Select '(15) Birds Of Paradise'
+# Select '(168) Terminix Dark'
 
 # ------------------------------------------------------- #
 # TMUX, ZSH, OH-MY-ZSH AND POWERLEVEL10K (OH-MY-ZSH THEME):
