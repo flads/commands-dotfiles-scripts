@@ -13,12 +13,7 @@ history | head -n 10
 # Search if a certain software is installed:
 dpkg -l | grep "software_name"
 
-# Logging into postgres via terminal:
-sudo -u postgres psql
-
-# Running a postgres script from the terminal:
-psql -h 127.0.0.1 -U postgres -d database -f filename.sql
-
 # Finding a file by name in a specific directory:
 find . -name "filename"
 find . -name "*filename*"
+

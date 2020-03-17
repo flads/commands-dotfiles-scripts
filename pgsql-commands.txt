@@ -1,0 +1,24 @@
+# Logging into postgres via terminal:
+sudo -u postgres psql
+
+# Running a postgres script from the terminal:
+psql -h 127.0.0.1 -U postgres -d database -f filename.sql
+
+# Connecting to a database:
+\c database_name
+
+# Listing the available databases:
+\l
+
+# Listing available tables:
+\dt
+
+# Describing a table:
+\d  table_name
+
+# Displaying command history:
+\s
+
+# Exiting psql:
+\q
+
