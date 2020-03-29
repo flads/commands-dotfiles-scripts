@@ -25,6 +25,12 @@ sudo curl -sS https://getcomposer.org/installer | php
 mv composer.phar /usr/local/bin/composer
 composer self-update
 
+# -------------------------- #
+# Command-line JSON processor:
+# -------------------------- #
+
+sudo apt-get install jq -y
+
 # ----------------------- #
 #  NODEJS AND NPM WITH NVM:
 # ----------------------- #
@@ -84,6 +90,9 @@ chsh -s /bin/zsh
 
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "$HOME/.zsh-syntax-highlighting" --depth 1
 echo "source ~/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ~/.zshrc
+
+echo 'export NVM_DIR="$HOME/.nvm" [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion' >> ~/.zshrc
 
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $ZSH/themes/powerlevel10k
 
