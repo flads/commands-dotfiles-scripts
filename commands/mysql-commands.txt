@@ -1,0 +1,2 @@
+# Export database:
+mysqldump -u username -p database_name > filename.sql
