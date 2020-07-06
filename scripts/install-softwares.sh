@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #-----------------------------------------------------------#
-# PHP, GIT, GIT-FLOW, VIM, VIM-PLUG, WGET, CURL AND COMPOSER:
+# PHP, GIT, GIT-FLOW, VIM, VIM-PLUG, WGET, CURL, COMPOSER AND JQ: 
 #-----------------------------------------------------------#
 
 sudo apt-get update
@@ -25,56 +25,10 @@ sudo curl -sS https://getcomposer.org/installer | php
 mv composer.phar /usr/local/bin/composer
 composer self-update
 
-# -------------------------- #
-# Command-line JSON processor:
-# -------------------------- #
-
 sudo apt-get install jq -y
 
-# ----------------------- #
-#  NODEJS AND NPM WITH NVM:
-# ----------------------- #
-
-sudo curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.2/install.sh | zsh
-
-echo 'export NVM_DIR="$HOME/.nvm" [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion' >> ~/.zshrc
-
-source ~/.zshrc
-
-nvm install v12.14.0
-nvm use v12.14.0
-
-# ------ #
-#  YARN:
-# ------ #
-
-sudo curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
-sudo echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
-
-sudo apt-get update
-sudo apt-get install yarn -y
-
-# ----- #
-# HTTPIE:
-# ----- #
-
-sudo apt-get install httpie -y
-
-# ----- #
-# GOGH:
-# ----- #
-
-# gsettings get org.gnome.Terminal.ProfilesList list (list profiles)
-# dconf reset -f /org/gnome/terminal/legacy/profiles:/ (reset profiles)
-
-dconf write /org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/use-theme-colors false
-
-bash -c  "$(wget -qO- https://git.io/vQgMr)"
-# Select '(168) Terminix Dark'
-
 # ------------------------------------------------------- #
-# TMUX, ZSH, OH-MY-ZSH AND POWERLEVEL10K (OH-MY-ZSH THEME):
+# TMUX, ZSH, OH-MY-ZSH AND FZF:
 # ------------------------------------------------------- #
 
 sudo apt-get update
@@ -94,8 +48,7 @@ echo "source ~/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ~/.zshrc
 echo 'export NVM_DIR="$HOME/.nvm" [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion' >> ~/.zshrc
 
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $ZSH/themes/powerlevel10k
-
-# Set ZSH_THEME="powerlevel10k/powerlevel10k" in ~/.zshrc.
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
 
 # Restart your computer to apply the changes...
