@@ -5,6 +5,11 @@ Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf', { 'do': './install --bin' }
 Plug 'szw/vim-tags'
 Plug 'szw/vim-g'
+Plug 'mattn/emmet-vim'
+Plug 'tpope/vim-surround'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'stedolan/jq'
+Plug 'kristijanhusak/vim-carbon-now-sh'
 call plug#end()
 
 map <C-n> :NERDTreeToggle<CR>
