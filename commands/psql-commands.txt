@@ -22,3 +22,11 @@ psql -h 127.0.0.1 -U postgres -d database -f filename.sql
 # Exiting psql:
 \q
 
+# Creating a database:
+create database mydb;
+
+# Creating a user:
+create user myuser with encrypted password 'mypass';
+
+# Granting privileges on database:
+grant all privileges on database mydb to myuser;
