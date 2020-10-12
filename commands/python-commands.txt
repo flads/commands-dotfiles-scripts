@@ -1,0 +1,15 @@
+# Install pip3:
+sudo apt-get install python3-pip && pip3 --version
+
+# Install virtualenv:
+py -m pip install --user virtualenv
+
+# Create a virtual environment for a project:
+py -m virtualenv venv
+
+# Activate the virtual environment:
+source venv/bin/activate
+
+# Deactivate the virtual environment:
+deactivate
+
