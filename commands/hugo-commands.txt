@@ -1,0 +1,19 @@
+# Create a new site:
+hugo new site quickstart
+
+# Add a theme:
+cd quickstart
+git init
+git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke
+
+# Add the theme to the site configuration:
+echo 'theme = "ananke"' >> config.toml
+
+# Add some content:
+hugo new posts/my-first-post.md
+
+# Start the Hugo server with drafts enabled:
+hugo server -D
+
+# Build static pages:
+hugo -D
