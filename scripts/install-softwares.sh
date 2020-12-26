@@ -1,8 +1,8 @@
 #!/bin/bash
 
-#---------------------------------------------------------------#
-# PHP, GIT, GIT-FLOW, VIM, VIM-PLUG, WGET, CURL, COMPOSER AND JQ: 
-#---------------------------------------------------------------#
+#------------------------------------------------------------------------#
+# PHP, GIT, GIT-FLOW, VIM, VIM-PLUG, WGET, CURL, COMPOSER, DBEAVER AND JQ: 
+#------------------------------------------------------------------------#
 
 sudo apt-get update
 sudo apt-get upgrade -y
@@ -24,6 +24,11 @@ sudo a2enconf php7.3-fpm
 cd ~
 curl -sS https://getcomposer.org/installer -o composer-setup.php
 sudo php composer-setup.php --install-dir=/usr/local/bin --filename=composer
+
+sudo apt-get install openjdk-11-jdk openjdk-11-jre -y
+wget -O - https://dbeaver.io/debs/dbeaver.gpg.key | sudo apt-key add -
+sudo apt-get update
+sudo apt-get install dbeaver-ce -y
 
 sudo apt-get install jq -y
 
