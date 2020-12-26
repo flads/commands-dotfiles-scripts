@@ -1,8 +1,8 @@
 #!/bin/bash
 
-#-----------------------------------------------------------#
+#---------------------------------------------------------------#
 # PHP, GIT, GIT-FLOW, VIM, VIM-PLUG, WGET, CURL, COMPOSER AND JQ: 
-#-----------------------------------------------------------#
+#---------------------------------------------------------------#
 
 sudo apt-get update
 sudo apt-get upgrade -y
@@ -21,9 +21,9 @@ sudo apt-get install php7.4 php7.4-bcmath php7.4-cgi php7.4-cli php7.4-curl php7
 
 sudo a2enconf php7.3-fpm
 
-sudo curl -sS https://getcomposer.org/installer | php
-mv composer.phar /usr/local/bin/composer
-composer self-update
+cd ~
+curl -sS https://getcomposer.org/installer -o composer-setup.php
+sudo php composer-setup.php --install-dir=/usr/local/bin --filename=composer
 
 sudo apt-get install jq -y
 
