@@ -1,0 +1,2 @@
+# Install a specific version of laravel
+composer create-project laravel/laravel=7 your-project-name --prefer-dist
