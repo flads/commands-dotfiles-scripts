@@ -1,0 +1,16 @@
+# Create a user:
+db.createUser({
+    user: "username",
+    pwd: "password",
+    roles: ["readWrite"]
+})
+
+# Grant roles to user:
+db.grantRolesToUser("username", ["readWrite"])
+
+# Remove a document:
+db.collection.remove({ "x": 1 });
+
+# Export a collection:
+mongoexport --collection=collection_name --db=database_name --out=~/filename.json
+
