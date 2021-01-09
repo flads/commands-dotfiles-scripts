@@ -1,8 +1,8 @@
 #!/bin/bash
 
-#------------------------------------------------------------------------#
-# PHP, GIT, GIT-FLOW, VIM, VIM-PLUG, WGET, CURL, COMPOSER, DBEAVER AND JQ: 
-#------------------------------------------------------------------------#
+#---------------------------------------------------------------------------------#
+# PHP, GIT, GIT-FLOW, VIM, VIM-PLUG, WGET, CURL, COMPOSER, DBEAVER, POSTMAN AND JQ: 
+#---------------------------------------------------------------------------------#
 
 sudo apt-get update
 sudo apt-get upgrade -y
@@ -30,6 +30,8 @@ wget -O - https://dbeaver.io/debs/dbeaver.gpg.key | sudo apt-key add -
 sudo apt-get update
 sudo apt-get install dbeaver-ce -y
 
+sudo snap install postman
+
 sudo apt-get install jq -y
 
 # ------------------------------------------------------- #
@@ -55,5 +57,18 @@ echo 'export NVM_DIR="$HOME/.nvm" [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.s
 
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
+
+# --- #
+# GOGH:
+# --- #
+
+mkdir -p "$HOME/src"
+cd "$HOME/src"
+git clone https://github.com/Mayccoll/Gogh.git gogh
+cd gogh/themes
+
+export TERMINAL=gnome-terminal
+
+./gruvbox-dark.sh
 
 # Restart your computer to apply the changes...
