@@ -1,9 +1,6 @@
 # Logging into postgres via terminal:
 sudo -u postgres psql
 
-# Running a postgres script from the terminal:
-psql -h 127.0.0.1 -U postgres -d database -f filename.sql
-
 # Connecting to a database:
 \c database_name
 
@@ -30,3 +27,13 @@ create user myuser with encrypted password 'mypass';
 
 # Granting privileges on database:
 grant all privileges on database mydb to myuser;
+
+# Run a SQL script:
+sudo -u postgres psql database_name -f "file.sql"
+
+# Create a database from an existing one:
+create database database_name with template database_name owner username;
+
+# Add column into a table
+alter table table_name add column column_name text
+
