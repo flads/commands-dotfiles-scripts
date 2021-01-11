@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #---------------------------------------------------------------------------------#
-# PHP, GIT, GIT-FLOW, VIM, VIM-PLUG, WGET, CURL, COMPOSER, DBEAVER, POSTMAN AND JQ: 
+# PHP, GIT, GIT-FLOW, VIM, VIM-PLUG, WGET, CURL, COMPOSER, DBEAVER, POSTMAN, NGINX AND JQ: 
 #---------------------------------------------------------------------------------#
 
 sudo apt-get update
@@ -30,7 +30,9 @@ wget -O - https://dbeaver.io/debs/dbeaver.gpg.key | sudo apt-key add -
 sudo apt-get update
 sudo apt-get install dbeaver-ce -y
 
-sudo snap install postman
+sudo snap install postman -y
+
+sudo apt-get install nginx -y
 
 sudo apt-get install jq -y
 
