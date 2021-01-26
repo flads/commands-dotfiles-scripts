@@ -33,3 +33,5 @@ git reset HEAD~1 --soft
 # Stash the changes in a dirty working directory away:
 git stash
 
+# File changes between commits:
+git diff <commit> <file>
