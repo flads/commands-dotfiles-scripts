@@ -1,8 +1,11 @@
 # Export database:
-mysqldump -u username -p database_name > filename.sql
+$ mysqldump -u username -p dbname > filename.sql
+
+# Import database:
+$ mysql -u username -p dbname < filename.sql
 
 # Create user:
-CREATE USER 'username'@'localhost' IDENTIFIED BY 'password';
+mysql> CREATE USER 'username'@'localhost' IDENTIFIED BY 'password';
 
 # Grant privileges to the new user:
-GRANT ALL PRIVILEGES ON *.* TO 'username'@'localhost';
+mysql> GRANT ALL PRIVILEGES ON *.* TO 'username'@'localhost';
