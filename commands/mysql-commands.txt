@@ -9,3 +9,6 @@ mysql> CREATE USER 'username'@'localhost' IDENTIFIED BY 'password';
 
 # Grant privileges to the new user:
 mysql> GRANT ALL PRIVILEGES ON *.* TO 'username'@'localhost';
+
+# Get size of mysql database:
+SELECT table_schema "tb_name", ROUND(SUM(data_length + index_length) / 1024 / 1024, 1) "DB Size in MB" FROM information_schema.tables GROUP BY table_schema;
