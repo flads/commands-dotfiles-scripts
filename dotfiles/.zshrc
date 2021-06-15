@@ -1,9 +1,9 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH=$PATH:/usr/local/go/bin
 
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
+export PATH=$PATH:/usr/local/go/bin
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -34,7 +34,7 @@ ZSH_THEME="robbyrussell"
 # export UPDATE_ZSH_DAYS=13
 
 # Uncomment the following line if pasting URLs and other text is messed up.
-# DISABLE_MAGIC_FUNCTIONS=true
+# DISABLE_MAGIC_FUNCTIONS="true"
 
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
@@ -46,6 +46,8 @@ ZSH_THEME="robbyrussell"
 # ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
+# Caution: this setting can cause issues with multiline prompts (zsh 5.7.1 and newer seem to work)
+# See https://github.com/ohmyzsh/ohmyzsh/issues/5765
 # COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
@@ -98,11 +100,29 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+alias astudio="~/src/android-studio/bin/studio.sh"
+alias sublime="~/src/sublime_text_3/sublime_text"
+alias bundletool="java -jar ~/src/bundletool-all-1.6.0.jar"
+alias dormir='shutdown -h 5'
+alias e='exit'
+alias findin='f(){ grep --exclude-dir={vendor,node_modules} -rnw ""$1"" ./; unset -f f; }; f'
+alias h="history"
+alias laranew='f(){ composer create-project --prefer-dist laravel/laravel $1; unset --f f; }; f'
+alias lara-clear='rm -rf storage/framework/views/* storage/framework/views/* storage/debugbar/* storage/logs/*'
+alias pfix="~/src/php-cs-fixer/vendor/bin/php-cs-fixer fix"
 alias py="python3.6"
 alias pys='py -m http.server'
-alias findin='f(){ grep --exclude-dir={vendor,node_modules} -rl ""$1"" ./; unset -f f; }; f'
-alias laranew='f(){ composer create-project --prefer-dist laravel/laravel $1; unset --f f; }; f'
+alias t='tmux'
+
+# sudo dd bs=4M if=ubuntu-20.04.2.0-desktop-amd64.iso of=/dev/sdb1 conv=fdatasync status=progress
+# tar xzvf file.tar.gz
+# tar xjf file.tar.bz2
 
 source ~/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
