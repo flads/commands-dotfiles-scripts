@@ -1,21 +1,21 @@
 #!/bin/bash
 
-#---------------------------------------------------------------------------------#
-# PHP, GIT, GIT-FLOW, VIM, VIM-PLUG, WGET, CURL, COMPOSER, DBEAVER, POSTMAN, NGINX AND JQ: 
-#---------------------------------------------------------------------------------#
+#------------------------------------------------------------------ #
+# PHP, Git, Git-Flow, Vim, Vim-Plug, Wget Curl, Composer and OpenJDK:
+#------------------------------------------------------------------ #
 
 sudo apt-get update
 sudo apt-get upgrade -y
-
-sudo apt-get install software-properties-common -y
-sudo LC_ALL=C.UTF-8 add-apt-repository ppa:ondrej/php -y
-sudo LC_ALL=C.UTF-8 add-apt-repository ppa:certbot/certbot -y
-sudo apt-get update
 
 sudo apt-get install git git-flow vim curl wget -y
 
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+sudo apt-get install software-properties-common -y
+sudo LC_ALL=C.UTF-8 add-apt-repository ppa:ondrej/php -y
+sudo LC_ALL=C.UTF-8 add-apt-repository ppa:certbot/certbot -y
+sudo apt-get update
 
 sudo apt-get install php7.3 php7.3-bcmath php7.3-cgi php7.3-cli php7.3-curl php7.3-dev php7.3-enchant php7.3-fpm php7.3-gd php7.3-gmp php7.3-intl php7.3-json php7.3-mbstring php7.3-mysql php7.3-opcache php7.3-pgsql php7.3-pspell php7.3-readline php7.3-soap php7.3-sqlite3 php7.3-tidy php7.3-xml php7.3-xmlrpc php7.3-xsl php7.3-zip php-imagick -y
 
@@ -27,6 +27,10 @@ sudo php composer-setup.php --install-dir=/usr/local/bin --filename=composer
 
 sudo apt-get install openjdk-11-jdk openjdk-11-jre -y
 
+#----------------------------------- #
+# Postman, Nginx, MySQL, Redis and Jq:
+#----------------------------------- #
+
 sudo snap install postman -y
 
 sudo apt-get install jq -y
@@ -35,14 +39,16 @@ sudo apt-get install nginx -y
 
 sudo apt-get install mysql-server -y
 
+sudo apt-get install redis-server -y
+
 sudo add-apt-repository ppa:certbot/certbot
 sudo apt-get update
-sudo apt-get upgrade
-sudo apt-get install python-certbot-nginx
+sudo apt-get upgrade -y
+sudo apt-get install python-certbot-nginx -y
 
-# ------------------------------------------------------- #
-# TMUX, ZSH, OH-MY-ZSH AND FZF:
-# ------------------------------------------------------- #
+# --------------------------- #
+# Tmux, Zsh, Oh-My-Zsh and Fzf:
+# --------------------------- #
 
 sudo apt-get update
 
@@ -75,6 +81,6 @@ cd gogh/themes
 
 export TERMINAL=gnome-terminal
 
-./chalk.sh
+# ./chalk.sh
 
 # Restart your computer to apply the changes...
