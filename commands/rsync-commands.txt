@@ -1,0 +1,2 @@
+# Copy file from remote PC
+rsync -v -e "ssh -i ~/.ssh/key.pem" user@public-ipv4:/var/www/file.txt  ~/Downloads
