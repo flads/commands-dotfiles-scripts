@@ -1,0 +1,26 @@
+# Install nvm:
+$ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
+
+# Lists all of the available versions of NodeJs & iojs:
+$ nvm ls-remote
+
+# List locally installed version:
+$ nvm ls   
+
+# Install the version 0.12.3 (see ls-remote for available options):
+$ nvm install 0.12
+
+# Switch to and use the installed 0.12.3 version:
+$ nvm use 0.12.3
+
+# The path to the installed node version:
+$ nvm which 0.12.2
+
+# What is the current installed nvm version:
+$ nvm current
+
+# Set the default node to the installed 0.10.32 version:
+$ nvm alias default 0.10.32
+
+# The help documents:
+$ nvm --help                    
