@@ -1,37 +1,26 @@
-#------------------#
-# Git Flow Commands:
-#------------------#
+# File changes between commits:
+git diff <commit> <file>
 
-git flow init -d
+# Stash the changes in a dirty working directory away:
+git stash
 
-git flow feature start feature_branch
+# List current stashes:
+git stash list
 
-git flow feature publish
+# Stash the untracked files:
+git stash -u
 
-git flow feature finish
+# Delete the stash:
+git stash clear
+git stash drop stash@{1}
 
-git flow release start 1.0.1
-
-git flow release finish
-
-git push --tags
-
-git flow hotfix start 1.0.1
-
-git flow hotfix finish
-
-#-------------#
-# Git Commands:
-#-------------#
+# Apply the stash:
+git stash pop
+git stash apply
+git stash apply stash@{1}
 
 # Interactively choose patch pieces and create commits:
 git commit -p
 
 # Undo the last commit and send the changes back to the staging area:
 git reset HEAD~1 --soft
-
-# Stash the changes in a dirty working directory away:
-git stash
-
-# File changes between commits:
-git diff <commit> <file>
