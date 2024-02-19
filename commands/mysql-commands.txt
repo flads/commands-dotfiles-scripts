@@ -5,7 +5,7 @@ $ mysqldump -u username -p dbname > filename.sql
 $ mysql -u username -p dbname < filename.sql
 
 # Create user:
-mysql> CREATE USER 'username'@'localhost' IDENTIFIED BY 'password';
+mysql> CREATE USER 'sammy'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';;
 
 # Grant privileges to the new user:
 mysql> GRANT ALL PRIVILEGES ON *.* TO 'username'@'localhost';
